@@ -32,14 +32,3 @@ def calulate_pay(hours,pay):
 def display_total(total):
     print(total)
 
-work_details()
-
-
-
-
-
-
-
-
-
-    
