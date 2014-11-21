@@ -23,17 +23,16 @@ def calculate_total_pay(hours,pay):
         total = calculate_overtime_pay(hours,pay)
     return total
 
+def display_total(total):
+    print(total)
+    
+def calculate_pay():
+    hours,pay = inputs()
+    total_pay = calculate_total_pay(hours,pay)
+    display_total(total_pay)
 
-def display_total(hours,pay):
-    print(calculate_total_pay(hours,pay))
+calculate_pay()
 
-
-
-hours,pay = inputs()
-calculate_basic_pay(hours,pay)
-calculate_overtime_pay(hours,pay)
-calculate_total_pay(hours,pay)
-display_total(hours,pay)
 
 
 
