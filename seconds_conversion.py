@@ -22,7 +22,7 @@ def total_secs(seconds,minutes,hours):
     return total
 
 def display_total(total_secs,hours,mins,secs):
-    print("The total numbers of seconds of {0} hours, {1} minutes and {3} seconds is {4}
+    print("The total numbers of seconds of {0} hours, {1} minutes and {2} seconds is {3}".format(hours,mins,secs,total_secs))
 
 #Main Program
 hours,mins,secs = inputs()
