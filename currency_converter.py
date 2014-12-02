@@ -1,4 +1,5 @@
 
+
 def currency_from():
     currency_from = str(input("Please enter your currency you would like to convert from. Enter either GBP, USD or EUR: "))
     return currency_from
@@ -13,25 +14,25 @@ def amount(currencyfrom):
 
 def multiplier(currencyto,currencyfrom):
     if currencyfrom == "GBP" and currencyto == "USD":
-        multiplier = 1/1.601
+        multiplier = 1.601
     elif currencyfrom == "GBP" and currencyto == "EUR":
-        multiplier = 1/1.229
+        multiplier = 1.229
     elif currencyfrom == "EUR" and currencyto == "GBP":
-        multiplier = 1/0.814
+        multiplier = 0.814
     elif currencyfrom == "EUR" and currencyto == "USD":
-        multiplier = 1/1.302
+        multiplier = 1.302
     elif currencyfrom == "USD" and currencyto == "GBP":
-        multiplier = 1/0.625
+        multiplier = 0.625
     else:
-        multiplier = 1/0.768
+        multiplier = 0.768
     return multiplier
 
 
 def conversion(total,mp):
-    conversion = float(total*mp)
+    conversion = total*mp
     return conversion
 
-def display(convert):
+def display(total,currencyfrom,convert,currencyto):
     print("{0} {1} = {2} {3}".format(total,currencyfrom,convert,currencyto))
 
 
@@ -40,7 +41,8 @@ def convert_currency():
     currencyto = currency_to()
     total = amount(currencyfrom)
     mp = multiplier(currencyto,currencyfrom)
-    convert = conversion(amount,mp)
-    display(conversion)
+    convert = conversion(total,mp)
+    display(total,currencyfrom,convert,currencyto)
+
 
 convert_currency()
