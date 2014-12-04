@@ -12,5 +12,11 @@ def mc_to_fi():
     inches = cm*0.397
     print("{0}m {1}cm = {2}foot {3}inches".format(metres,cm,foot,inches))
 
-choice = int(input("Type 0 for metre and centimetres to foot and inches " "n/" "Type 1 for foot and inches to metres and centimetres"))
+choice = int(input("Type 0 for metre and centimetres to foot and inches. Type 1 for foot and inches to metres and centimetres. "))
+if choice == 0:
+    mc_to_fi()
+elif choice == 1:
+    fi_to_mc()
+else:
+    print("This is not defined.")
 
